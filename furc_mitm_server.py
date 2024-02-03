@@ -421,7 +421,7 @@ class FurcadiaProxyInstance:
     
     async def startScript(self):
         proc = await asyncio.create_subprocess_exec(
-            sys.executable, "-u", os.path.join("/home/felix/.scripts", "furc_mitm_agent.py"),
+            sys.executable, "-u", os.path.join("./", "furc_mitm_agent.py"),
             '--character', self.data["character"],
             limit = 1024 * 1024,
             stdout=asyncio.subprocess.PIPE,
